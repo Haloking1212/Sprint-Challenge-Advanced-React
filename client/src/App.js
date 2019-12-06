@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Nav from "./components/Nav";
 import "./App.css";
 
 class App extends React.Component {
@@ -20,6 +21,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h3>Soccer Women's World Cup</h3>
+        <Nav/>
         {this.state.women.map(player => {
           return (
             <div>
