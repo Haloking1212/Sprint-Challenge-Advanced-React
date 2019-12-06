@@ -1,9 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { render } from "@testing-library/react";
 import App from './App';
+import Nav from "./components/Nav";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('renders without crashing', () => {
+ const component = render(<App/>)
 });
+
+test("nav renders", () => {
+  const nav = render(<Nav />)
+})
+
+test("player div card renders", () => {
+  const player = render(<div className="card"></div>)
+})
